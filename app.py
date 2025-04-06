@@ -22,7 +22,7 @@ async def main():
     try:
         from handlers import dp
         await on_startup()
-        from utils.is_status import AdminMiddleware, SubscriptionMiddleware
+        from utils.is_status import AdminMiddleware
         dp.message.middleware(AdminMiddleware())
         dp.callback_query.middleware(AdminMiddleware())
 
@@ -30,6 +30,7 @@ async def main():
             user.user_main.router,
 
             admin.admin_main.router,
+            admin.mailing.router,
 
             core.core.router,
         )
