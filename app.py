@@ -34,7 +34,7 @@ async def main():
 
             core.core.router,
         )
-
+        await bot.delete_webhook()
         await dp.start_polling(bot)
     finally:
         await bot.session.close()
