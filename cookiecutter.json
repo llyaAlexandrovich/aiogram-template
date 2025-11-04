@@ -1,0 +1,4 @@
+{
+  "project_name": "telegram-bot",
+  "bot_mode": ["longpoll", "webhook"]
+}
