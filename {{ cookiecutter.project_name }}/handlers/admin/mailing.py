@@ -47,6 +47,7 @@ async def run_mailing(call: CallbackQuery, state: FSMContext):
         if type(mailing_message.message) is not list
         else [item.message_id for item in mailing_message.message],
     )
+
     await bot.send_message(
         chat_id=call.message.chat.id,
         text="<b>Отправить?</b>",
